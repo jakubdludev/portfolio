@@ -12,7 +12,7 @@ const welcome = {
 const intro1 = {
     subtitle: <div><img className="w-36 sm:w-48 rounded-full mx-auto my-7" src="profilephoto.png" />Introduction</div>,
     title: 'Who am I?',
-    content: <div><div>My name is Jakub and I am a self taught full stack JavaScript web developer from Edinburgh,  currently looking for my first role in the tech industry.   </div></div>,
+    content: <div><div>My name is Jakub and I am a self taught software developer from edinburgh,  currently looking for my first role in the tech industry.   </div></div>,
     color: 'text-yellow-500',
 }
 
@@ -33,7 +33,7 @@ const education1 = {
 const skills1 = {
   subtitle: <div><img className="w-36 h-36 sm:w-48 sm:h-48 rounded-full mx-auto my-7" src="skills1.png" alt="photo credit - unsplash" />EDUCATION & SKILLS</div>,
   title: 'Technical Skills',
-  content: <div><div className="text-sm sm:text-lg">My Primary programming language is JavaScript for both front and back end solutions. While learning JavaScript I have also used various libraries, framework and technologies... </div></div>,
+  content: <div><div className="text-sm sm:text-lg">My primary programming languages are JavaScript and Python for both front and back end solutions. While learning JavaScript I have also used various libraries, frameworks and technologies... </div></div>,
   color: 'text-indigo-500',
 }
 
@@ -42,6 +42,14 @@ const javascript = {
   subtitle: <div><img className="w-36 h-36 sm:w-48 sm:h-48 rounded-full mx-auto my-7" src="javascript.png" alt="photo credit - unsplash" />EDUCATION & SKILLS</div>,
   title: 'JavaScript',
   content: <div><div className="text-sm sm:text-lg">I am comfortable writing both Object Oriented and Procedural JavaScript code, have experience working with modern features (ES6 and ES7) and asynchronous javascript</div></div>,
+  color: 'text-indigo-500',
+}
+
+
+const python = {
+  subtitle: <div><img className="w-36 h-36 sm:w-48 sm:h-48 rounded-full mx-auto my-7" src="python.png" alt="photo credit - unsplash" />EDUCATION & SKILLS</div>,
+  title: 'Python',
+  content: <div><div className="text-sm sm:text-lg"> I have a good understanding of Python and have used it in one of my projects for it's great computer vision capabilities using OpenCV2 library. </div></div>,
   color: 'text-indigo-500',
 }
 
@@ -107,6 +115,7 @@ export default function Home() {
     const css_ref= useRef()
     const google_ref = useRef()
     const finish_ref = useRef()
+    const python_ref = useRef()
 
     return (
         <div >
@@ -166,7 +175,19 @@ export default function Home() {
         data-aos-mirror="true"
         data-aos-once="false"
         data-aos-anchor-placement="top-center"
-      > <Slide  {...skills1} next={javascript_ref}/>
+      > <Slide  {...skills1} next={python_ref}/>
+      </div>
+      <div
+        ref={python_ref}
+        className=""
+        data-aos="zoom-out-top"
+        data-aos-delay="0"
+        data-aos-duration="800"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+        data-aos-anchor-placement="top-center"
+      > <Slide  {...python} next={javascript_ref}/>
       </div>
       <div
         ref={javascript_ref}
